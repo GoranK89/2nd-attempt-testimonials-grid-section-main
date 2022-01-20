@@ -1,0 +1,178 @@
+/* Moderate violet: hsl(263, 55%, 52%)
+Very dark grayish blue: hsl(217, 19%, 35%)
+Very dark blackish blue: hsl(219, 29%, 14%)
+White: hsl(0, 0%, 100%)
+
+### Neutral
+
+Light gray: hsl(0, 0%, 81%)
+Light grayish blue: hsl(210, 46%, 95%)
+
+Note for text colors:
+
+1. "Verified Graduate" has the same color as the person's name
+ with 50% opacity
+2. Review paragraphs inside the quotations have the same color
+ as well, but are at 70% opacity */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Barlow Semi Condensed", sans-serif;
+  font-size: 13px;
+  line-height: 1;
+  background-color: hsl(0, 0%, 81%);
+  margin: 100px auto;
+}
+
+.testimonial-component {
+  display: grid;
+  justify-content: center;
+  gap: 30px;
+  grid-template-columns: repeat(4, 350px);
+  grid-template-rows: repeat(3, auto);
+}
+
+.testimonial-cards {
+  display: flex;
+  flex-direction: column;
+  border-radius: 10px;
+  box-shadow: 0 0 6px 4px lightgray;
+  gap: 28px;
+  padding: 40px;
+  line-height: 20px;
+}
+
+/* THE GRADUATE PROFILE */
+.graduate-container {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  font-weight: 600;
+}
+
+.graduate-info {
+  display: flex;
+  flex-direction: column;
+}
+
+.verified-graduate {
+  opacity: 0.5;
+}
+
+img {
+  display: inline-block;
+  height: 56px;
+  width: 56px;
+  border-radius: 50%;
+}
+
+/* TESTIMONIAL CARDS */
+#quote-img {
+  position: absolute;
+  top: 25px;
+  right: 15%;
+  transform: scale(1.5);
+  height: auto;
+  width: auto;
+  border-radius: 0;
+  border: none;
+}
+
+.daniel--clifford {
+  position: relative;
+  background-color: hsl(263, 55%, 52%);
+  grid-column: 1 / 3;
+  color: hsl(0, 0%, 100%);
+}
+
+h1 {
+  opacity: 0.99;
+  line-height: 30px;
+  letter-spacing: 0.4px;
+}
+
+.daniel--clifford img {
+  border: solid 3px rgb(255, 255, 255, 0.3);
+}
+/* ///////////////////////////////////////////////////// */
+h2 {
+  font-size: 26px;
+  line-height: 30px;
+}
+
+.daniel--clifford p:nth-child(4),
+.jeanette--harmon p:nth-child(3),
+.kira--whittle p:nth-child(3),
+.jonathan--walters p:nth-child(3),
+.patrick--abrams p:nth-child(3) {
+  opacity: 0.7;
+  font-size: 16px;
+}
+
+.jonathan--walters,
+.patrick--abrams {
+  background-color: hsl(217, 19%, 35%);
+  color: hsl(0, 0%, 100%);
+}
+
+/* ///////////////////////////////////////////////////// */
+.jeanette--harmon,
+.kira--whittle {
+  background-color: hsl(0, 0%, 100%);
+  color: hsl(219, 29%, 14%);
+  margin-left: 30px;
+}
+
+.kira--whittle {
+  grid-column: 4; /* setting the position to 4th column first */
+  grid-row: 1 / span 2; /* then setting row span to 2 cells */
+}
+
+/* ///////////////////////////////////////////////////// */
+.patrick--abrams {
+  background-color: hsl(219, 29%, 14%);
+  grid-column: 2 / 4;
+}
+
+.patrick--abrams img {
+  border: 3px solid hsl(263, 55%, 52%);
+}
+
+/* ATTRIBUTION */
+
+.attribution {
+  grid-column: 1 / -1;
+}
+
+@media only screen and (max-width: 600px) {
+  .testimonial-component {
+    grid-template-columns: 350px;
+    grid-template-rows: repeat(6, auto);
+  }
+
+  .daniel--clifford {
+    grid-column: 1;
+  }
+  .kira--whittle {
+    grid-column: 1; /* setting the position to 4th column first */
+    grid-row: 5 / span 1; /* then setting row span to 2 cells */
+  }
+
+  .patrick--abrams {
+    grid-column: 1;
+  }
+
+  .jeanette--harmon,
+  .kira--whittle {
+    margin-left: 0;
+  }
+
+  .attribution {
+    grid-column: 1 / -1;
+  }
+}
