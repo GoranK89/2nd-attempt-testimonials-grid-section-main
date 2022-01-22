@@ -38,13 +38,16 @@ body {
 }
 
 .testimonial-cards {
-  display: flex;
-  flex-direction: column;
   border-radius: 10px;
   box-shadow: 0 0 6px 4px lightgray;
-  gap: 28px;
   padding: 40px;
   line-height: 20px;
+}
+
+.graduate-container,
+h1,
+h2 {
+  margin-bottom: 20px;
 }
 
 /* THE GRADUATE PROFILE */
@@ -131,6 +134,9 @@ h2 {
 .kira--whittle {
   grid-column: 4; /* setting the position to 4th column first */
   grid-row: 1 / span 2; /* then setting row span to 2 cells */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
 
 /* ///////////////////////////////////////////////////// */
@@ -170,6 +176,7 @@ h2 {
   .jeanette--harmon,
   .kira--whittle {
     margin-left: 0;
+    margin-right: 0;
   }
 
   .attribution {
